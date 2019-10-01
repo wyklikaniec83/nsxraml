@@ -12430,6 +12430,8 @@ securitySchemes:
         **ipPrefix**  | Details for one IP prefix. |  Optional. Required only if you define redistribution rules in dynamic routing protocols like ospf, bgp.
         **ipPrefix > name**  | The name of the IP prefix. | All defined IP prefixes must have unique names.
         **ipPrefix > ipAddress**  | IP addresses for the IP prefix. | Optional. String.
+        **ipPrefix > ge**  | Routes which have a network prefix greater than the value of the provided ge and less than 32, are filtered for redistribution. Allowed value is 0 to 32. | Optional. String.
+        **ipPrefix > le**  | Routes which have a network prefix less than the value of the provided le, are filtered for redistribution. Allowed value is 0 to 32. | Optional. String.
         
         ### Default Route Configuration
         
@@ -12576,6 +12578,8 @@ securitySchemes:
                     <ipPrefix>
                       <name>a</name>
                       <ipAddress>192.168.10.0/24</ipAddress>
+                      <ge>24</ge>
+                      <le>24</le>
                     </ipPrefix>
                   </ipPrefixes>
                 </routingGlobalConfig>
@@ -12718,6 +12722,8 @@ securitySchemes:
                     <ipPrefix>
                       <name></name>
                       <ipAddress></ipAddress>
+                      <ge></ge>
+                      <le></le>
                     </ipPrefix>
                   </ipPrefixes>
                 </routingGlobalConfig>

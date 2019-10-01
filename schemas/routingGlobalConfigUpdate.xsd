@@ -20,6 +20,8 @@
                   <xs:sequence>
                     <xs:element type="xs:string" name="name"/>
                     <xs:element type="xs:string" name="ipAddress"/>
+                    <xs:element type="xs:string" name="ge"/>
+                    <xs:element type="xs:string" name="le"/>
                   </xs:sequence>
                 </xs:complexType>
               </xs:element>
