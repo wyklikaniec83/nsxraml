@@ -5,6 +5,7 @@
         <xs:element type="xs:string" name="enabled"/>
         <xs:element type="xs:string" name="localAS"/>
         <xs:element type="xs:string" name="localASNumber"/>
+        <xs:element type="xs:string" name="gracefulRestart"/>
         <xs:element name="bgpNeighbours">
           <xs:complexType>
             <xs:sequence>
